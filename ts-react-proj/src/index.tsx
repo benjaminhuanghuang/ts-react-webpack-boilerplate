@@ -1,8 +1,7 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom";
 
-const App: React.FunctionComponent = () => {
-  return <h1>My React App!!!</h1>;
-};
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-ReactDOM.render(<App />, document.getElementById("root") as HTMLElement);
+import App from './App';
+
+ReactDOM.render(<App />, document.getElementById('root'));
