@@ -9,25 +9,23 @@ interface IState {
   countDown: number;
 }
 class App extends Component<{}, IState> {
-  private handleCancelConfirmClick = () => {
-   
-  };
+  private handleCancelConfirmClick = () => {};
 
-  private handleOkConfirmClick = () => {
-   
-  };
+  private handleOkConfirmClick = () => {};
 
   public render() {
     return (
       <div className="App">
         <header className="App-header">...</header>
-        <Confirm   open={true}
-            title="React and TypeScript"
-            content="Are you sure you want to learn React and TypeScript?"
-            cancelCaption="No way"
-            okCaption="Yes please!"
-            onCancelClick={this.handleCancelConfirmClick}
-            onOkClick={this.handleOkConfirmClick}/>
+        <Confirm
+          open={true}
+          title="React and TypeScript"
+          content="Are you sure you want to learn React and TypeScript?"
+          cancelCaption="No way"
+          okCaption="Yes please!"
+          onCancelClick={this.handleCancelConfirmClick}
+          onOkClick={this.handleOkConfirmClick}
+        />
       </div>
     );
   }
