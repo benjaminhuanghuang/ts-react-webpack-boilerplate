@@ -1,4 +1,7 @@
 const path = require("path");
+// create html based on a template and and import bundle.js
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
 module.exports = {
   entry: "./src/index.tsx",
   module: {
@@ -31,4 +34,10 @@ module.exports = {
     compress: true,
     port: 3721,
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "assets/index.html",
+      favicon: "assets/favicon.ico",
+    }),
+  ],
 };
